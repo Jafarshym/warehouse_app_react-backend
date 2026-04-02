@@ -1,0 +1,38 @@
+.headboos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.blocklogo {
+    max-width: 200px;
+    /* border: 1px solid black; */
+}
+
+.blocknav {
+    max-width: 400px;
+    /* border: 1px solid black; */
+   
+}
+.blocknav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+.blocknav ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link_nav {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.link_nav:hover{
+    
+    color: aqua;
+}

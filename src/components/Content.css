@@ -1,0 +1,20 @@
+.master_conteiner{
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    border: 0px solid black;
+}
+.div_h1{
+    display: flex;
+    justify-content: center;
+}
+
+.border_div {
+    border: 0px solid black;
+    width: 120px;
+}
+
+.button_edit{
+    width: 50px;
+    height: 20px;
+}

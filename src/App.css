@@ -1,0 +1,30 @@
+/* контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+.header {
+  padding: 20px;
+  background: #706f6f;
+  color: white;
+}
+
+/* main */
+.main {
+  flex: 1; /* ВАЖНО — растягивает контент */
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+/* footer */
+.footer {
+  padding: 20px;
+  background: #222;
+  color: white;
+}
