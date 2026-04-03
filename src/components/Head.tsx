@@ -10,8 +10,8 @@ export default function HelloWorld() {
                         <li><Link to="/" className="link_nav">Все товары</Link></li>
                         <li><Link to="/add" className="link_nav">Добовление товара</Link></li>
                         <li><Link to="/comerc" className="link_nav">Магазин</Link></li>
-                        <li>Поиск</li>
-                        <li>Вход</li>
+                        <li><input type="text" className="searge-my"></input></li>
+                        
                     </ul>
                 </div>
             </div>

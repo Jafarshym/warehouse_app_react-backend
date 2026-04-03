@@ -22,8 +22,6 @@ function App() {
                 <Route path="/add" element={<AddProduct />} />
                 <Route path="/edit/:id" element={<EditProduct />}/>
                 <Route path="/comerc" element={<ComercCard />}/>
-
-                
             </Routes>
           </main>
 
