@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import { Routes, Route} from "react-router-dom";
 import HelloWorld from './components/Head'
 import ContentAll from './components/Content'
@@ -8,17 +8,18 @@ import ComercCard from "./components/ComercCard"
 import './App.css'
 
 function App() {
-  
+        const [search, setSearch] = useState("");
+        // console.log(search);
   return (
     <>
       <div className="container">
           <header className="header">
-            <HelloWorld />
+            <HelloWorld setSearch={setSearch} />
          </header>
 
           <main className="main">
             <Routes>
-                <Route path="/" element={<ContentAll />} />
+                <Route path="/" element={<ContentAll search={search}/>} />
                 <Route path="/add" element={<AddProduct />} />
                 <Route path="/edit/:id" element={<EditProduct />}/>
                 <Route path="/comerc" element={<ComercCard />}/>

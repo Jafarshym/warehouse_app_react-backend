@@ -10,24 +10,34 @@ type Product = {
   unit: string;
   min_stock: number;
 };
+type ContentProps = {
+  search: string
+}
 
 
-
-function ContentAll() {
+function ContentAll({ search }: ContentProps) {
    const [products, setProducts] = useState<Product[]>([]);
    const navigate = useNavigate();
   useEffect(() => {
     async function getProducts() {
       try {
-        const res = await axios.get<Product[]>("http://localhost:8000/products/");
-        setProducts(res.data);
+        if(!search){
+          const res = await axios.get<Product[]>("http://localhost:8000/products/");
+          
+          setProducts(res.data);
+          
+        }else{
+         const res = await axios.get<Product[]>(`http://localhost:8000/search/${search}`);
+         console.log(`Строка поиска : ${search}`);
+         setProducts(res.data);
+        }
       } catch (err) {
         console.error(err);
       }
     }
 
     getProducts();
-  }, []);
+  }, [search]);
 
           async function delProduct(id: number){
                 const res = await fetch(`http://localhost:8000/products/${id}`,{
