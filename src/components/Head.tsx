@@ -31,7 +31,7 @@ export default function HelloWorld({ setSearch }: HeadProps) {
                         <li><Link to="/comerc" className="link_nav">Магазин</Link></li>
                         <li><input 
                                 type="text" 
-                                className="searge-my" 
+                                className="form-control" 
                                 placeholder="Поиск..."
                                 value={value}
                                 onChange={handleChange}>
