@@ -43,6 +43,7 @@ function AddProduct(){
     }
     return(
         <>
+        <div className="div_root_master">
             <div className="master_conteiner">
                 <div className="div_h1">
                     <h1>Добавление нового товара</h1>
@@ -71,7 +72,7 @@ function AddProduct(){
                     </div>
                 </div>
             </div>
-        
+        </div>
         </>
     );
 }

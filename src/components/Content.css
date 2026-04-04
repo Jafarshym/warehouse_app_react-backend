@@ -1,8 +1,14 @@
+.div_root_master{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center; 
+    border: 1px solid black;
+}
 .master_conteiner{
-    width: 100%;
+    width: 1000px;
     /* display: flex; */
     /* justify-content: center; */
-    border: 0px solid black;
+    border: 1px solid black;
 }
 .div_h1{
     display: flex;

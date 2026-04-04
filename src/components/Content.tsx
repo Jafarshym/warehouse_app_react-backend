@@ -53,38 +53,40 @@ function ContentAll({ search }: ContentProps) {
         }
 
   return (
-    <div className="master_conteiner">
-      <div className="div_h1">
-          <h1>Список складских товаров</h1>
-      </div>  
-      <div className="container mt-4">
+    <div className="div_root_master">
+      <div className="master_conteiner">
+        <div className="div_h1">
+            <h1>Список складских товаров</h1>
+        </div>  
+        <div className="container mt-4">
 
-        {/* Заголовок */}
-        <div className="d-flex fw-bold border-bottom py-2">
-          <div className="flex-fill border_div">ID</div>
-          <div className="flex-fill border_div">Название</div>
-          <div className="flex-fill border_div">ед</div>
-          <div className="flex-fill border_div">Stock</div>
-          <div className="flex-fill border_div">Edit</div>
-          <div className="flex-fill border_div">Del</div>
-        </div>
-
-        {/* Данные из API */}
-        {products.map((p) => (
-          <div key={p.id} className="d-flex border-bottom py-2">
-            <div className="flex-fill border_div">{p.id}</div>
-            <div className="flex-fill border_div">{p.name}</div>
-            <div className="flex-fill border_div">{p.unit}</div>
-            <div className="flex-fill border_div">{p.min_stock}</div>
-            <div className="flex-fill border_div">
-              <button className="btn btn-info" onClick={() => navigate(`/edit/${p.id}`)}>Edit</button>
-            </div>
-            <div className="flex-fill border_div">
-              <button className="btn btn-danger" onClick={ () => delProduct(p.id) } >Del</button>
-            </div>
+          {/* Заголовок */}
+          <div className="d-flex fw-bold border-bottom py-2">
+            <div className="flex-fill border_div">ID</div>
+            <div className="flex-fill border_div">Название</div>
+            <div className="flex-fill border_div">ед</div>
+            <div className="flex-fill border_div">Stock</div>
+            <div className="flex-fill border_div">Edit</div>
+            <div className="flex-fill border_div">Del</div>
           </div>
-        ))}
 
+          {/* Данные из API */}
+          {products.map((p) => (
+            <div key={p.id} className="d-flex border-bottom py-2">
+              <div className="flex-fill border_div">{p.id}</div>
+              <div className="flex-fill border_div">{p.name}</div>
+              <div className="flex-fill border_div">{p.unit}</div>
+              <div className="flex-fill border_div">{p.min_stock}</div>
+              <div className="flex-fill border_div">
+                <button className="btn btn-info" onClick={() => navigate(`/edit/${p.id}`)}>Edit</button>
+              </div>
+              <div className="flex-fill border_div">
+                <button className="btn btn-danger" onClick={ () => delProduct(p.id) } >Del</button>
+              </div>
+            </div>
+          ))}
+
+        </div>
       </div>
     </div>
   );

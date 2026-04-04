@@ -33,6 +33,7 @@ export default function ComercCard(){
 
     return(
         <>
+        <div className="div_root_master">
             <div className="master_conteiner">
                 <div className="div_h1">
                     <h1>Магазин</h1>
@@ -62,6 +63,7 @@ export default function ComercCard(){
                 </div>
                    
             </div>
+        </div>
         </>
     );
 }
