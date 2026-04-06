@@ -9,6 +9,7 @@ type Product = {
   images: string;
   price: number;
   
+  
 };
 
 export default function ComercCard(){
